@@ -661,6 +661,25 @@ async function saveEntryToSnd(item) {
 }
 
 /**
+ * Print an item entry from S&D
+ * @param {Item} item - The item document
+ * @returns {Promise<boolean>} - True if successful
+ */
+async function printEntryFromSnd(item) {
+  const apiHost = game.settings.get(MODULE_ID, 'apiHost');
+  const dataSource = getDataSource(item.type);
+  const templateId = dataSource.replace('ds:', 'tmpl:');
+
+  const response = await fetch(`${apiHost}/api/printTemplateEntry`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify([templateId, item._id, {}])
+  });
+
+  return response.ok;
+}
+
+/**
  * Handle the send2snd button click
  * @param {Item} item - The item document
  */
@@ -673,14 +692,20 @@ async function onSend2SndClick(item) {
   }
 
   try {
-    const success = await saveEntryToSnd(item);
-    if (success) {
-      ui.notifications.info(`Sent ${item.name} to SND`);
-    } else {
+    const saveSuccess = await saveEntryToSnd(item);
+    if (!saveSuccess) {
       ui.notifications.error(`Failed to send ${item.name}`);
+      return;
+    }
+
+    const printSuccess = await printEntryFromSnd(item);
+    if (printSuccess) {
+      ui.notifications.info(`Printed ${item.name}`);
+    } else {
+      ui.notifications.warn(`Sent ${item.name} but failed to print`);
     }
   } catch (e) {
-    console.error(`${MODULE_ID} | Failed to send item:`, e);
+    console.error(`${MODULE_ID} | Failed to send/print item:`, e);
     ui.notifications.error(`Failed to connect to SND API`);
   }
 }
