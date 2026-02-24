@@ -1,0 +1,552 @@
+{
+  "_id": "4F2m8PkZLcbXgz6o",
+  "_stats": {
+    "compendiumSource": null,
+    "coreVersion": "13.351",
+    "createdTime": 1771617190239,
+    "duplicateSource": null,
+    "exportSource": null,
+    "lastModifiedBy": "QDOAbyj5ibUrWhbJ",
+    "modifiedTime": 1771617190239,
+    "systemId": "dnd5e",
+    "systemVersion": "5.2.5"
+  },
+  "effects": [],
+  "flags": {},
+  "folder": null,
+  "img": "https://cdn.5e.tools/2024/img/items/DMG/Instrument%20of%20the%20Bards,%20Doss%20Lute.webp",
+  "imgBase64": null,
+  "name": "Instrument of the Bards, Doss Lute",
+  "ownership": {
+    "QDOAbyj5ibUrWhbJ": 3,
+    "default": 0
+  },
+  "sort": 0,
+  "system": {
+    "ability": "int",
+    "activities": {
+      "G3tlcxx6JqQy7gJy": {
+        "_id": "G3tlcxx6JqQy7gJy",
+        "activation": {
+          "override": false,
+          "type": "action"
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "concentration": false,
+          "override": false,
+          "units": "inst"
+        },
+        "flags": {},
+        "img": "systems/dnd5e/icons/svg/activity/cast.svg",
+        "range": {
+          "override": false,
+          "units": "self"
+        },
+        "sort": 0,
+        "spell": {
+          "challenge": {
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": ""
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          }
+        },
+        "type": "cast",
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      },
+      "jrJ62E45DGC1YmqR": {
+        "_id": "jrJ62E45DGC1YmqR",
+        "activation": {
+          "override": false,
+          "type": "action"
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "concentration": false,
+          "override": false,
+          "units": "inst"
+        },
+        "flags": {},
+        "img": "systems/dnd5e/icons/svg/activity/cast.svg",
+        "range": {
+          "override": false,
+          "units": "self"
+        },
+        "sort": 0,
+        "spell": {
+          "challenge": {
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": ""
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          }
+        },
+        "type": "cast",
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      },
+      "ocGtGY6eejyFcYFW": {
+        "_id": "ocGtGY6eejyFcYFW",
+        "activation": {
+          "override": false,
+          "type": "action"
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "concentration": false,
+          "override": false,
+          "units": "inst"
+        },
+        "flags": {},
+        "img": "systems/dnd5e/icons/svg/activity/cast.svg",
+        "range": {
+          "override": false,
+          "units": "self"
+        },
+        "sort": 0,
+        "spell": {
+          "challenge": {
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": ""
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          }
+        },
+        "type": "cast",
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      },
+      "uBVK3dkgAulpTO6P": {
+        "_id": "uBVK3dkgAulpTO6P",
+        "activation": {
+          "override": false,
+          "type": "action"
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "concentration": false,
+          "override": false,
+          "units": "inst"
+        },
+        "flags": {},
+        "img": "systems/dnd5e/icons/svg/activity/cast.svg",
+        "range": {
+          "override": false,
+          "units": "self"
+        },
+        "sort": 0,
+        "spell": {
+          "challenge": {
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": ""
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          }
+        },
+        "type": "cast",
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      },
+      "wYBd1u6Yb5vtMAqM": {
+        "_id": "wYBd1u6Yb5vtMAqM",
+        "activation": {
+          "override": false,
+          "type": "action"
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "concentration": false,
+          "override": false,
+          "units": "inst"
+        },
+        "flags": {},
+        "img": "systems/dnd5e/icons/svg/activity/cast.svg",
+        "range": {
+          "override": false,
+          "units": "self"
+        },
+        "sort": 0,
+        "spell": {
+          "challenge": {
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": ""
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          }
+        },
+        "type": "cast",
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      },
+      "x9iCmRJMNVnD4y1s": {
+        "_id": "x9iCmRJMNVnD4y1s",
+        "activation": {
+          "override": false,
+          "type": "action"
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "concentration": false,
+          "override": false,
+          "units": "inst"
+        },
+        "flags": {},
+        "img": "systems/dnd5e/icons/svg/activity/cast.svg",
+        "range": {
+          "override": false,
+          "units": "self"
+        },
+        "sort": 0,
+        "spell": {
+          "challenge": {
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": ""
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          }
+        },
+        "type": "cast",
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      },
+      "yOR256pQ7YRrcD0M": {
+        "_id": "yOR256pQ7YRrcD0M",
+        "activation": {
+          "override": false,
+          "type": "action"
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": []
+        },
+        "description": {},
+        "duration": {
+          "concentration": false,
+          "override": false,
+          "units": "inst"
+        },
+        "flags": {},
+        "img": "systems/dnd5e/icons/svg/activity/cast.svg",
+        "range": {
+          "override": false,
+          "units": "self"
+        },
+        "sort": 0,
+        "spell": {
+          "challenge": {
+            "override": false
+          },
+          "level": null,
+          "properties": [
+            "vocal",
+            "somatic",
+            "material"
+          ],
+          "spellbook": true,
+          "uuid": ""
+        },
+        "target": {
+          "affects": {
+            "choice": false
+          },
+          "override": false,
+          "prompt": true,
+          "template": {
+            "contiguous": false,
+            "units": "ft"
+          }
+        },
+        "type": "cast",
+        "uses": {
+          "max": "1",
+          "recovery": [
+            {
+              "period": "day",
+              "type": "recoverAll"
+            }
+          ],
+          "spent": 0
+        },
+        "visibility": {
+          "level": {},
+          "requireAttunement": false,
+          "requireIdentification": false,
+          "requireMagic": false
+        }
+      }
+    },
+    "attuned": true,
+    "attunement": "required",
+    "bonus": "",
+    "chatFlavor": "",
+    "container": null,
+    "description": {
+      "chat": "",
+      "value": "<i>(requires attunement by a bard)</i>\n\t\t<p>An instrument of the bards is an exquisite example of its kind, superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a legendary bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take 2d4 type=psychic damage.</p><p>You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.</p><p>You can play the instrument while casting a spell that causes any of its targets to be &amp;Reference[condition=charmed] on a failed saving throw, thereby imposing disadvantage on the save. This effect applies only if the spell has a somatic or a material component.</p><p>All instruments of the bards can be used to cast the following spells: fly, invisibility, levitate, and protection from evil and good.</p><p>In addition, the Doss lute can be used to cast animal friendship, protection from energy (fire only), and protection from poison.</p>"
+    },
+    "equipped": false,
+    "identified": true,
+    "identifier": "instrument-of-the-bards-doss-lute",
+    "price": {
+      "denomination": "gp",
+      "value": 0
+    },
+    "proficient": null,
+    "properties": [
+      "mgc"
+    ],
+    "quantity": 1,
+    "rarity": "uncommon",
+    "source": {
+      "book": "DMG'14",
+      "custom": "",
+      "license": "",
+      "page": "176",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "type": {
+      "baseItem": "lute",
+      "value": "music"
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "uses": {
+      "recovery": [],
+      "spent": 0
+    },
+    "weight": {
+      "units": "lb",
+      "value": 2
+    }
+  },
+  "type": "tool"
+}

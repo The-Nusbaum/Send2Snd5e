@@ -1,0 +1,37 @@
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; font-size: 16pt; line-height: 1.3; }
+  .card { padding: 4mm 2mm; }
+  .header { border-bottom: 2px solid #000; padding-bottom: 2mm; margin-bottom: 2mm; display: flex; gap: 4mm; }
+  .header-text { flex: 1; }
+  .header-img { width: 27mm; height: 27mm; object-fit: contain; border: 2px solid #000; order: 2; background: #000; filter: brightness(calc(100% + 25%)) grayscale(100%) contrast(1000%); }
+  .name { font-size: 16pt; font-weight: bold; text-transform: uppercase; }
+  .type { font-size: 12pt; font-style: italic; margin-top: 1mm; }
+  .desc { font-size: 14pt; margin-top: 2mm; padding-top: 2mm; border-top: 2px solid #000; text-align: justify; }
+  .desc p { margin-bottom: 2mm; }
+  .desc p:last-child { margin-bottom: 0; }
+  .source { font-size: 10pt; text-align: right; margin-top: 2mm; border-top: 1px dotted #000; padding-top: 1mm; }
+</style>
+
+<div class="card">
+  <div class="header">
+    {% if it.imgBase64 %}<img class="header-img" src="{{ it.imgBase64 }}" alt="">{% elif it.img %}<img class="header-img" src="{{ it.img }}" alt="">{% endif %}
+    <div class="header-text">
+      <div class="name">{{ it.name }}</div>
+      <div class="type">
+        {%- if it.type == "feat" -%}
+          {%- set featTypes = {"feat":"Feat","class":"Class Feature","race":"Racial Trait","background":"Background Feature"} -%}
+          {{ featTypes[it.system.type.value] | default("Feature") }}
+        {%- else -%}
+          {{ it.type | capitalize }}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="desc">{{ it.system.description.value | safe }}</div>
+
+  {% if it.system.source and it.system.source.book %}
+  <div class="source">{{ it.system.source.book }}{% if it.system.source.page %} p.{{ it.system.source.page }}{% endif %}</div>
+  {% endif %}
+</div>

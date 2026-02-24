@@ -1,0 +1,14 @@
+{
+  "send2snd": {
+    "title": "Send2Snd",
+    "settings": {
+      "enabled": {
+        "name": "Enable Title Bar Icon",
+        "hint": "Show the Send2Snd icon in item window title bars."
+      }
+    },
+    "ui": {
+      "buttonTooltip": "Send to Snd"
+    }
+  }
+}

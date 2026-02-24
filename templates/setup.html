@@ -1,0 +1,28 @@
+<form>
+  <p style="margin-bottom: 1em;">
+    This will create the necessary datasources and templates in your SND application.
+  </p>
+  
+  <div style="margin-bottom: 1em; padding: 0.5em; background: #f0f0f0; border-radius: 4px;">
+    <strong>Current Settings:</strong><br>
+    API Host: {{ apiHost }}
+  </div>
+
+  <p style="margin-bottom: 0.5em; font-size: 0.9em; color: #666;">
+    Change the API Host in Module Settings if needed.
+  </p>
+
+  <hr style="margin: 1em 0;">
+
+  <div style="display: flex; flex-direction: column; gap: 0.5em;">
+    <button type="button" id="setup-datasources" class="dialog-button">
+      <i class="fas fa-database"></i> Create Datasources Only
+    </button>
+    <button type="button" id="setup-templates" class="dialog-button">
+      <i class="fas fa-file-code"></i> Create Templates Only
+    </button>
+    <button type="button" id="setup-all" class="dialog-button default">
+      <i class="fas fa-magic"></i> Setup Everything
+    </button>
+  </div>
+</form>

@@ -1,0 +1,92 @@
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; font-size: 16pt; line-height: 1.3; }
+  .card { padding: 4mm 2mm; }
+  .header { border-bottom: 2px solid #000; padding-bottom: 2mm; margin-bottom: 2mm; display: flex; gap: 4mm; }
+  .header-text { flex: 1; }
+  .header-img { width: 27mm; height: 27mm; object-fit: contain; border: 2px solid #000; order: 2; background: #000; filter: brightness(calc(100% + 25%)) grayscale(100%) contrast(1000%); }
+  .name { font-size: 16pt; font-weight: bold; text-transform: uppercase; }
+  .type { font-size: 12pt; font-style: italic; margin-top: 1mm; }
+  .rarity { display: block; font-size: 11pt; font-weight: bold; text-transform: uppercase; margin-top: 1mm; }
+  .attune { display: block; font-size: 11pt; font-style: italic; margin-top: 1mm; }
+  .stat { display: flex; justify-content: space-between; font-size: 14pt; border-bottom: 1px dotted #000; padding: 1mm 0; }
+  .stat:last-child { border-bottom: none; }
+  .stat-label { font-weight: bold; }
+  .props { font-size: 12pt; font-style: italic; margin: 2mm 0; padding: 1mm; border: 1px dotted #000; }
+  .desc { font-size: 14pt; margin-top: 2mm; padding-top: 2mm; border-top: 2px solid #000; text-align: justify; }
+  .desc p { margin-bottom: 2mm; }
+  .desc p:last-child { margin-bottom: 0; }
+  .source { font-size: 10pt; text-align: right; margin-top: 2mm; border-top: 1px dotted #000; padding-top: 1mm; }
+</style>
+
+<div class="card">
+  <div class="header">
+    {% if it.imgBase64 %}<img class="header-img" src="{{ it.imgBase64 }}" alt="">{% elif it.img %}<img class="header-img" src="{{ it.img }}" alt="">{% endif %}
+    <div class="header-text">
+    <div class="name">{{ it.name }}</div>
+    <div class="type">
+      {%- if it.type == "weapon" -%}
+        {{ it.system.type.baseItem | default("Weapon") | capitalize }}{% if it.system.magicalBonus %} +{{ it.system.magicalBonus }}{% endif %}
+      {%- elif it.type == "equipment" -%}
+        {{ it.system.type.value | replace("wondrous", "Wondrous Item") | capitalize }}
+      {%- elif it.type == "consumable" -%}
+        {{ it.system.type.value | capitalize }}
+      {%- elif it.type == "loot" -%}
+        {{ it.system.type.value | default("Gear") | capitalize }}
+      {%- else -%}
+        {{ it.type | capitalize }}
+      {%- endif -%}
+    </div>
+    {% if it.system.rarity %}<div class="rarity">{{ it.system.rarity }}</div>{% endif %}
+    {% if it.system.attunement == "required" %}<div class="attune">(requires attunement)</div>{% endif %}
+    </div>
+  </div>
+
+  {% if it.type == "weapon" and it.system.damage and it.system.damage.base %}
+  <div class="stat">
+    <span class="stat-label">Damage</span>
+    <span>{{ it.system.damage.base.number }}d{{ it.system.damage.base.denomination }}{% if it.system.magicalBonus %}+{{ it.system.magicalBonus }}{% endif %} {{ it.system.damage.base.types[0] | default("") }}</span>
+  </div>
+  {% endif %}
+
+  {% if it.type == "weapon" and (it.system.range.reach or it.system.range.value) %}
+  <div class="stat">
+    <span class="stat-label">Range</span>
+    <span>{% if it.system.range.reach %}{{ it.system.range.reach }} ft{% endif %}{% if it.system.range.value %} / {{ it.system.range.value }}{% if it.system.range.long %}/{{ it.system.range.long }}{% endif %} ft{% endif %}</span>
+  </div>
+  {% endif %}
+
+  {% if it.system.armor and it.system.armor.value %}
+  <div class="stat">
+    <span class="stat-label">AC</span>
+    <span>{{ it.system.armor.value }}{% if it.system.armor.dex %} + Dex (max {{ it.system.armor.dex }}){% endif %}</span>
+  </div>
+  {% endif %}
+
+  {% if it.system.weight and it.system.weight.value %}
+  <div class="stat">
+    <span class="stat-label">Weight</span>
+    <span>{{ it.system.weight.value }} {{ it.system.weight.units }}</span>
+  </div>
+  {% endif %}
+
+  {% if it.system.price and it.system.price.value %}
+  <div class="stat">
+    <span class="stat-label">Value</span>
+    <span>{{ it.system.price.value }} {{ it.system.price.denomination }}</span>
+  </div>
+  {% endif %}
+
+  {% if it.system.properties and it.system.properties.length > 0 %}
+  <div class="props">
+    {%- set propNames = {"mgc":"Magical","hvy":"Heavy","two":"Two-Handed","fin":"Finesse","lgt":"Light","thr":"Thrown","ver":"Versatile","amm":"Ammunition","lod":"Loading","rch":"Reach","spc":"Special","ada":"Adamantine","sil":"Silvered","stl":"Stealth Disadv."} -%}
+    {% for prop in it.system.properties %}{{ propNames[prop] | default(prop) }}{% if not loop.last %}, {% endif %}{% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="desc">{{ it.system.description.value | safe }}</div>
+
+  {% if it.system.source and it.system.source.book %}
+  <div class="source">{{ it.system.source.book }}{% if it.system.source.page %} p.{{ it.system.source.page }}{% endif %}</div>
+  {% endif %}
+</div>

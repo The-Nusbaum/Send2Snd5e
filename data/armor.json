@@ -1,0 +1,124 @@
+{
+  "_id": "fH2Aumqxoe5YPMYk",
+  "_stats": {
+    "compendiumSource": null,
+    "coreVersion": "13.351",
+    "createdTime": 1771616776437,
+    "duplicateSource": null,
+    "exportSource": null,
+    "lastModifiedBy": "QDOAbyj5ibUrWhbJ",
+    "modifiedTime": 1771616776437,
+    "systemId": "dnd5e",
+    "systemVersion": "5.2.5"
+  },
+  "effects": [
+    {
+      "_id": "jCycM2YEBEvgGbjM",
+      "_stats": {
+        "compendiumSource": null,
+        "coreVersion": "13.351",
+        "duplicateSource": null,
+        "exportSource": null,
+        "lastModifiedBy": null,
+        "systemId": "dnd5e",
+        "systemVersion": "5.2.5"
+      },
+      "changes": [
+        {
+          "key": "system.traits.dr.value",
+          "mode": 2,
+          "priority": 7,
+          "value": "poison"
+        }
+      ],
+      "description": "",
+      "disabled": false,
+      "duration": {
+        "combat": null,
+        "rounds": null,
+        "seconds": null,
+        "startRound": null,
+        "startTime": null,
+        "startTurn": null,
+        "turns": null
+      },
+      "flags": {},
+      "img": "https://cdn.5e.tools/2024/img/items/DitLCoT/Demon%20Skin.webp",
+      "name": "Damage Resistance",
+      "origin": null,
+      "sort": 0,
+      "statuses": [],
+      "system": {},
+      "tint": "#ffffff",
+      "transfer": true,
+      "type": "base"
+    }
+  ],
+  "flags": {},
+  "folder": null,
+  "img": "https://cdn.5e.tools/2024/img/items/DitLCoT/Demon%20Skin.webp",
+  "imgBase64": null,
+  "name": "Demon Skin Splint Armor",
+  "ownership": {
+    "QDOAbyj5ibUrWhbJ": 3,
+    "default": 0
+  },
+  "sort": 0,
+  "system": {
+    "activities": {},
+    "armor": {
+      "dex": 0,
+      "magicalBonus": null,
+      "value": 17
+    },
+    "attuned": true,
+    "attunement": "required",
+    "container": null,
+    "crew": {
+      "value": []
+    },
+    "description": {
+      "chat": "",
+      "value": "<p>This magic armor appears as a pot of bubbling black ichor. When you attune to it, the ichor adheres to and contours to your skin, and the pot disappears. The armor can be worn under normal clothes, and it doesn't impede bodily functions. Once you put it on, it can't be removed unless you choose to do so or you die, at which point the pot reappears and the ichor flows back into it.</p><p>While wearing the armor, you have resistance to poison damage. The armor also doesn't impose disadvantage on Dexterity (&amp;Reference[skill=Stealth]) checks.</p><p>This armor is made of narrow vertical strips of metal riveted to a backing of leather that is worn over cloth padding. Flexible chain mail protects the joints.</p>"
+    },
+    "equipped": true,
+    "identified": true,
+    "identifier": "demon-skin-splint-armor",
+    "price": {
+      "denomination": "gp",
+      "value": 0
+    },
+    "proficient": null,
+    "properties": [
+      "mgc"
+    ],
+    "quantity": 1,
+    "rarity": "rare",
+    "source": {
+      "book": "DitLCoT",
+      "custom": "",
+      "license": "",
+      "page": "14",
+      "revision": 1,
+      "rules": "2014"
+    },
+    "strength": 15,
+    "type": {
+      "baseItem": "splint",
+      "value": "heavy"
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "uses": {
+      "max": "",
+      "recovery": [],
+      "spent": 0
+    },
+    "weight": {
+      "units": "lb",
+      "value": 60
+    }
+  },
+  "type": "equipment"
+}

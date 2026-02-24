@@ -1,0 +1,40 @@
+{
+  "id": "send2snd",
+  "title": "Send2Snd5e",
+  "description": "Send2Snd5e - Send D&D 5e items, spells, and features from FoundryVTT to S&D (Sales & Dungeons) for thermal receipt printing. Adds a print icon to item sheets for quick export.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "cashmerecthulu"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "5.0.0"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/module.js"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ]
+}
