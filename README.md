@@ -2,12 +2,22 @@
 
 A FoundryVTT module that integrates with [S&D (Sales & Dungeons)](https://sales-and-dungeons.app/) to print D&D 5e items, spells, and features on thermal receipt printers.
 
+## But... why?
+
+Foundry is really handy for in person games as well as remote play. If you dont mind a laptop on the table it can be a fully featured and incredible useful DM screen. I 
+wanted to ability to print little handouts with details on treasure, weapons, spells, etc. on receipt paper. !5 minutes later I found S&D and ordered a printer.
+
 ## Features
 
 - Adds a print icon to item, spell, and feature sheets
 - Automatically formats data for 58mm thermal receipt printers
 - Converts item images to base64 for embedded printing
 - Supports items, spells, feats, class features, and race/species traits
+
+## Printers
+- S&D lists the printers that they have tested on in their [Documentation](https://sales-and-dungeons.app/docs/printer/models/)
+- I purchased this little guy on  [Amazon](https://www.amazon.com/dp/B0CL481GS1). I doubt that link will survive terribly long,
+  but its a cheap 58mm wireless (bluetooth) receipt printer. Its small and portable.
 
 ## Requirements
 
@@ -42,7 +52,8 @@ This will create:
 ### Step 3: Start Printing
 1. Open any item, spell, or feature sheet in FoundryVTT
 2. Click the **print icon** in the sheet's title bar
-3. The entry will be sent to S&D and can be printed from there
+3. The entry will be sent to S&D where it will save it and and print 
+   to your configured thermal printer
 
 ## Configuration
 
